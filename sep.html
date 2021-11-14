@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Explore</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            background-color: whitesmoke;
+            font-weight: 550;
+        }
+
+        #cont {
+            text-decoration: none;
+            margin-bottom: 0%;
+        }
+
+        #d1,
+        #d2 {
+            background-color: #6a3668;
+            width: fit-content;
+            padding: 6%;
+            float: left;
+            border-radius: 10px;
+            margin: 3px;
+            color: white;
+        }
+
+        #d3 {
+            background-color: #6a3668;
+            width: fit-content;
+            padding: 6%;
+            float: left;
+            border-radius: 10px;
+            color: white;
+        }
+
+        #p1,
+        #p2,
+        #p3,
+        #p4,
+        #p5 {
+            float: left;
+            display: block;
+            padding: 1.5%;
+            cursor: pointer;
+            border-collapse: collapse;
+            width: 20%;
+            text-align: center;
+            background-color: #6a3668;
+            border-bottom: 5px solid whitesmoke;
+            margin-bottom: 0%;
+            color: white;
+        }
+
+        /* .dropdown {
+            position: relative;
+            display: inline-block;
+        } */
+
+        .dropdown-content {
+            display: none;
+            background-color: #cb99c9;
+            width: 100%;
+            z-index: 2;
+            margin-top: 0%;
+            padding: 3%;
+        }
+
+
+        /* .dropdown:hover #p1{
+            border-bottom: 5px solid black;
+            
+        } */
+        #op1 p,
+        #op2 p,
+        #op3 p,
+        #op4 p,
+        #op5 p {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 2%;
+            cursor: pointer;
+        }
+
+        #op1 p:hover,#op2 p:hover,#op3 p:hover,#op4 p:hover,#op5 p:hover {
+            background-color: #9e509b;
+        }
+
+        #p1:hover,#p2:hover,#p3:hover,#p4:hover,#p5:hover {
+            border-bottom: 5px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" id="cont">
+        <div class="dropdown">
+            <p id="p1" onmouseover="fi()">Men</p>
+            <p id="p2" onmouseover="fi1()">Wedding</p>
+            <p id="p3" onmouseover="fi2()">Women</p>
+            <p id="p4" onmouseover="fi3()">Popular</p>
+            <p id="p5" onmouseover="fi4()">Trend</p>
+        </div>
+
+
+    </div>
+
+    <div style="clear: both; margin-bottom: 0%;"></div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi()" onmouseout="f2()">
+        <div class="dropdown-content" id="d11">
+            <div class="row">
+                <div class="col-md-6" id="op1">
+                    <p>Elegent</p>
+                    <p>Party Wear</p>
+                    <p>Sleek</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://ik.imagekit.io/plushvie/tr:w-1200,h-1200,cm-pad_resize,pr-true/image/catalog/silver_shine/ring%205/10-RG288-4.jpg"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi1()" onmouseout="f22()">
+        <div class="dropdown-content" id="d12">
+            <div class="row">
+                <div class="col-md-6" id="op2">
+                    <p>Trend</p>
+                    <p>Fashionble</p>
+                    <p>Diamond</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1518370265276-f22b706aeac8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fGpld2VsbGVyeSUyMGZvciUyMG1lbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi2()" onmouseout="f23()">
+        <div class="dropdown-content" id="d13">
+            <div class="row">
+                <div class="col-md-6" id="op3">
+                    <p>Youth</p>
+                    <p>Party</p>
+                    <p>Business</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1594709286121-519552affdc0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUxfHxqZXdlbGxlcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style=" height: auto; max-height: 300px; width: auto;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi3()" onmouseout="f24()">
+        <div class="dropdown-content" id="d14">
+            <div class="row">
+                <div class="col-md-6" id="op4">
+                    <p>Gold</p>
+                    <p>Feel Good</p>
+                    <p>Modern</p>
+                    <p>Casual</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1551443083-96ad4897c329?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGpld2VsbGVyeSUyMGZvciUyMGJveXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi4()" onmouseout="f25()">
+        <div class="dropdown-content" id="d15">
+            <div class="row">
+                <div class="col-md-6" id="op5">
+                    <p>Gold</p>
+                    <p>Silver</p>
+                    <p>Diamond</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1575343661961-396d02abf317?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGpld2VsbGVyeSUyMGZvciUyMGJveXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container" style="z-index: -1;">
+        <div>
+            <h1>Know More</h1>
+        </div><br>
+
+        <div class="row">
+            <div class="col-md-6" style="text-align: center;">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    style=" height: auto; max-width: 600px;" id="myimage">
+
+            </div>
+            <div class="col-md-6" id="myresult">
+                <h3>TRIPLE HEARTS DIAMOND NECKLACE</h3>
+                <i class="fa fa-star" style="color: gold;"></i>
+                <i class="fa fa-star" style="color: gold;"></i>
+                <i class="fa fa-star" style="color: gold;"></i>
+                <i class="fa fa-star" style="color: gold;"></i>
+                <i class="fa fa-star" style="color: rgb(172, 169, 152);"></i>
+                | User Ratings: 4/5 | Style No: C018181
+                <p><del>Rs. 29,495</del> &nbspRs. 23,596 &nbspBook @10%</p>
+                <p>Offer Price :</p>
+                <p>Rs. 23,079 (25% OFF on Diamond Prices)</p>
+                <p>You save : Rs. 517 Use coupon <code>MEGA</code> at checkout</p>
+                <p>Use Axis Bank Credit card to get 10% off /-</p>
+                <button class="btn btn-success">Add to Cart</button>
+
+            </div>
+        </div>
+
+
+    </div>
+    <script language="javascript" type="text/javascript">
+        var x1 = document.getElementById("d11")
+        
+        var x2 = document.getElementById("d12")
+        
+        var x3 = document.getElementById("d13")
+        
+        var x4 = document.getElementById("d14")
+        
+        var x5 = document.getElementById("d15")
+        
+
+        x1.style.display = "none"
+        x2.style.display = "none"
+        x3.style.display = "none"
+        x4.style.display = "none"
+        x5.style.display = "none"
+        function fi() {
+            x1.style.display = 'block'
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f2() {
+            x1.style.display = 'none'
+
+        }
+
+        function fi1() {
+            x2.style.display = 'block'
+            x1.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f22() {
+            x2.style.display = 'none'
+        }
+
+        function fi2() {
+            x3.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f23() {
+            x3.style.display = 'none'
+        }
+
+        function fi3() {
+            x4.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f24() {
+            x4.style.display = 'none'
+        }
+
+        function fi4() {
+            x5.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+
+        }
+        function f25() {
+            x5.style.display = 'none'
+        }
+        function head1() {
+            x5.style.display = 'none'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+
+        }
+    </script>
+</body>
+
+</html>

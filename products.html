@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Products</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: 'Cinzel', serif;
+            font-weight: 550;
+        }
+
+        .card:hover {
+            cursor: pointer;
+            box-shadow: 5px 10px 18px #888888;
+            transform: scale(1.05);
+            transition: 500ms;
+        }
+
+        #filters {
+            background-color: white;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+
+        }
+
+        #d1,
+        #d2 {
+            background-color: #6a3668;
+            width: fit-content;
+            padding: 6%;
+            float: left;
+            border-radius: 10px;
+            margin: 3px;
+            color: white;
+        }
+
+        #d3 {
+            background-color: #6a3668;
+            width: fit-content;
+            padding: 6%;
+            float: left;
+            border-radius: 10px;
+            color: white;
+        }
+
+        #p1,
+        #p2,
+        #p3,
+        #p4,
+        #p5 {
+            float: left;
+            display: block;
+            padding: 1.5%;
+            cursor: pointer;
+            border-collapse: collapse;
+            width: 20%;
+            text-align: center;
+            background-color: #6a3668;
+            border-bottom: 5px solid whitesmoke;
+            margin-bottom: 0%;
+            color: white;
+        }
+
+        /* .dropdown {
+            position: relative;
+            display: inline-block;
+        } */
+
+        .dropdown-content {
+            display: none;
+            background-color: #cb99c9;
+            width: 100%;
+            z-index: 2;
+            margin-top: 0%;
+            padding: 3%;
+        }
+
+
+        /* .dropdown:hover #p1{
+            border-bottom: 5px solid black;
+            
+        } */
+        #op1 p,
+        #op2 p,
+        #op3 p,
+        #op4 p,
+        #op5 p {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 2%;
+            cursor: pointer;
+        }
+
+        #op1 p:hover,#op2 p:hover,#op3 p:hover,#op4 p:hover,#op5 p:hover {
+            background-color: #9e509b;
+        }
+
+        #p1:hover,#p2:hover,#p3:hover,#p4:hover,#p5:hover {
+            border-bottom: 5px solid black;
+        }
+
+        #change div div {
+            padding: 2%;
+        }
+
+        #change div div p {
+            padding-top: 15px;
+        }
+
+        #change div div span {
+            padding-top: 30px;
+        }
+
+        #change div div p:hover {
+            background-color: #6a3668;
+            color: white;
+            cursor: pointer;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            padding-top: 15px;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            cursor: pointer;
+            background: #cb99c9;
+            border-radius: 5px;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            border-radius: 5px;
+            background: #FFFFFF;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b> | CASA BLANCA |</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Back to home</a>
+                </li>
+
+
+        </div>
+    </nav>
+    <div class="container" onmouseenter="head1()" >
+        <br>
+        <div style="text-align: center;" >
+            <h1>Explore Our Wide Range of Products</h1>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid" id="cont">
+        <div class="dropdown">
+            <p id="p1" onmouseover="fi()">Men</p>
+            <p id="p2" onmouseover="fi1()">Wedding</p>
+            <p id="p3" onmouseover="fi2()">Women</p>
+            <p id="p4" onmouseover="fi3()">Popular</p>
+            <p id="p5" onmouseover="fi4()">Trend</p>
+        </div>
+
+
+    </div>
+
+    <div style="clear: both; margin-bottom: 0%;"></div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi()" onmouseout="f2()">
+        <div class="dropdown-content" id="d11">
+            <div class="row">
+                <div class="col-md-6" id="op1">
+                    <p>Elegent</p>
+                    <p>Party Wear</p>
+                    <p>Sleek</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://ik.imagekit.io/plushvie/tr:w-1200,h-1200,cm-pad_resize,pr-true/image/catalog/silver_shine/ring%205/10-RG288-4.jpg"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi1()" onmouseout="f22()">
+        <div class="dropdown-content" id="d12">
+            <div class="row">
+                <div class="col-md-6" id="op2">
+                    <p>Trend</p>
+                    <p>Fashionble</p>
+                    <p>Diamond</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1518370265276-f22b706aeac8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fGpld2VsbGVyeSUyMGZvciUyMG1lbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi2()" onmouseout="f23()">
+        <div class="dropdown-content" id="d13">
+            <div class="row">
+                <div class="col-md-6" id="op3">
+                    <p>Youth</p>
+                    <p>Party</p>
+                    <p>Business</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1594709286121-519552affdc0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUxfHxqZXdlbGxlcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style=" height: auto; max-height: 300px; width: auto;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi3()" onmouseout="f24()">
+        <div class="dropdown-content" id="d14">
+            <div class="row">
+                <div class="col-md-6" id="op4">
+                    <p>Gold</p>
+                    <p>Feel Good</p>
+                    <p>Modern</p>
+                    <p>Casual</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1551443083-96ad4897c329?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGpld2VsbGVyeSUyMGZvciUyMGJveXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi4()" onmouseout="f25()">
+        <div class="dropdown-content" id="d15">
+            <div class="row">
+                <div class="col-md-6" id="op5">
+                    <p>Gold</p>
+                    <p>Silver</p>
+                    <p>Diamond</p>
+                    <p>Platinum</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1575343661961-396d02abf317?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGpld2VsbGVyeSUyMGZvciUyMGJveXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container-fluid">
+        <br>
+        <div class="container" id="filters" style="width:20%; height: 100%; float:left; padding-top: 0.5%;">
+            <h3 style="text-align: center;">Filters</h3>
+            <div class="container" style="background-color: white; padding: 2%;">
+                <p>Max Price:</p>
+                <div class="slider">
+                    <input type="range" min="0" max="1000" onchange="rangevalue1.value=value" style="width: 100%;"
+                        style="background-color: #6a3668;" />
+                    <output id="rangevalue1" style="text-align: center;">500</output>
+                </div>
+            </div><br>
+            <div class="container" style="background-color: white; padding: 2%;">
+                <p>Metal Weight(in grams)</p>
+                <div class="slider">
+                    <input type="range" min="0" max="900" onchange="rangevalue2.value=value" style="width: 100%;" />
+                    <output id="rangevalue2" style="text-align: center;">200</output>
+                </div>
+            </div><br>
+            <div class="container" style="background-color: white; padding: 2%;">
+                <p>User Reviews</p>
+                <div class="slider">
+                    <input type="range" min="0" max="5" onchange="rangevalue.value=value" style="width: 100%;" />
+                    <output id="rangevalue" style="text-align: center;">4</output>
+                </div>
+            </div><br>
+            <div class="container-fluid" style="background-color: white; padding: 2%;">
+                <p>Material</p>
+                <div class="slider">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="d1()">Gold</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="d2()">Silver</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="d3()">Diamond</a></li>
+                        </ul>
+                    </div>
+                </div><br>
+                <p id="d1">Gold <i class="fa fa-close" onclick="d11()" style="cursor:pointer;"></i></p>
+                <p id="d2">Silver <i class="fa fa-close" onclick="d22()" style="cursor:pointer;"></i></p>
+                <p id="d3">Diamond <i class="fa fa-close" onclick="d33()" style="cursor:pointer;"></i></p>
+            </div><br><br><br><br><br>
+
+        </div>
+
+
+        <div class="container" style="width: 80%; float: right; ">
+
+            <div class="row">
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8amV3ZWxsZXJ5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 200px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1579726670131-487ecc8e1e8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8amV3ZWxsZXJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 200px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 200px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div><br>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1588444650700-fd887f15a9e7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1583484370773-c1af4e528d5e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1611598935678-c88dca238fce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div><br>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1601121141461-920cb1993441?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.unsplash.com/photo-1623133343364-04d1d1a26fcb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fGpld2VsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            <p class="card-text">Triple Hearts Diamond</p>
+                            <p><del>Rs. 21,864</del> Rs. 17,491</p>
+                            <p>Offer Price: Rs. 16,974</p>
+
+                        </div>
+                    </div><br>
+                </div><br>
+
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="container" style="max-width: 900px; height:100px; text-align: center" id="change">
+        <div class="row">
+            <div class="col-2" id="curr">
+                <p>1</p>
+            </div>
+            <div class="col-2">
+                <p>2</p>
+            </div>
+            <div class="col-2">
+                <p>3</p>
+            </div>
+            <div class="col-2">
+                <p>4</p>
+            </div>
+            <div class="col-2">
+                <p>...</p>
+            </div>
+            <div class="col-2">
+                <p>10</p>
+            </div>
+        </div>
+    </div><br>
+    <script language="javascript" type="text/javascript">
+        var x = document.getElementById("d1");
+        var y = document.getElementById("d2");
+        var z = document.getElementById("d3");
+        x.style.display = 'none'
+        y.style.display = 'none'
+        z.style.display = 'none'
+        function myfunc() {
+            window.open("sep.html", "_blank");
+        }
+        function d1() {
+            x.style.display = 'block'
+        }
+        function d2() {
+            y.style.display = 'block'
+        }
+        function d3() {
+            z.style.display = 'block'
+        }
+        function d11() {
+            x.style.display = 'none'
+        }
+        function d22() {
+            y.style.display = 'none'
+        }
+        function d33() {
+            z.style.display = 'none'
+        }
+
+        var x1 = document.getElementById("d11")
+        
+        var x2 = document.getElementById("d12")
+        
+        var x3 = document.getElementById("d13")
+        
+        var x4 = document.getElementById("d14")
+        
+        var x5 = document.getElementById("d15")
+        
+
+        x1.style.display = "none"
+        x2.style.display = "none"
+        x3.style.display = "none"
+        x4.style.display = "none"
+        x5.style.display = "none"
+        function fi() {
+            x1.style.display = 'block'
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f2() {
+            x1.style.display = 'none'
+
+        }
+
+        function fi1() {
+            x2.style.display = 'block'
+            x1.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f22() {
+            x2.style.display = 'none'
+        }
+
+        function fi2() {
+            x3.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f23() {
+            x3.style.display = 'none'
+        }
+
+        function fi3() {
+            x4.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f24() {
+            x4.style.display = 'none'
+        }
+
+        function fi4() {
+            x5.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+
+        }
+        function f25() {
+            x5.style.display = 'none'
+        }
+        function head1() {
+            x5.style.display = 'none'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+
+        }
+        
+    </script>
+</body>
+
+</html>
